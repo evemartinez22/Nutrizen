@@ -1,0 +1,242 @@
+/* Otros estilos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffb74d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.header-background {
+    background-image: url('banner.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #1a5b1b;
+    text-shadow: 0 0 10px #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    background-color: rgba(255, 183, 77, 0.9); /* Color naranja medio transparente */
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+/* Ajustes en la sección de presentación */
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1a5b1b; /* Fondo verde oscuro */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.catazen {
+    width: 300px; /* Tamaño un poco más grande para armonizar con el texto */
+    height: auto;
+    border-radius: 50%; /* Opción para mantener un estilo más atractivo */
+    margin-right: 20px;
+}
+
+.text-block {
+    max-width: 600px;
+    background-color: #1a5b1b; /* Fondo verde oscuro */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Ajustes en la sección de Instagram */
+.redes-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em; /* Tamaño de letra un poco más pequeño */
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #ffb74d; /* Fondo naranja */
+    padding: 10px; /* Padding adicional para el fondo */
+    border-radius: 8px;
+}
+
+.icono-instagram {
+    width: auto; /* Ajuste automático para evitar distorsión */
+    height: 1em; /* Tamaño proporcional a la altura de la palabra Instagram */
+    margin-right: 10px;
+}
+
+/* Ajuste para los reels */
+.reels-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #ffb74d; /* Fondo naranja */
+    padding: 20px; /* Padding adicional para el fondo */
+    border-radius: 8px;
+}
+
+.instagram-media {
+    width: 30%; /* Tamaño proporcional a la página */
+    min-width: 200px;
+}
+
+/* Botones */
+.boton-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.boton-whatsapp img {
+    max-width: 20px;
+    height: auto;
+    margin-right: 10px;
+    display: inline-block; /* Asegura que el icono se muestre en línea */
+}
+
+.boton-compra {
+    background-color: #ffb74d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Ajusta el tamaño de fuente */
+}
+
+.boton-compra:hover {
+    background-color: #ffffff;
+    color: #ffb74d;
+}
+
+/* Sección de la tienda */
+.pdf-container {
+    display: flex;
+    justify-content: center; /* Centra los PDF */
+    gap: 15px; /* Espacio entre los PDF */
+    align-items: stretch; /* Asegura que los elementos tengan la misma altura */
+}
+
+.pdf-block {
+    background-color: #1a5b1b; /* Fondo verde oscuro */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Establece un ancho fijo */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido dentro del bloque se alinee verticalmente */
+    justify-content: space-between; /* Distribuye el espacio equitativamente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.pdf-block img {
+    width: 100%; /* Hace que la imagen ocupe el ancho del contenedor */
+    height: auto;
+    border-radius: 8px;
+    max-width: 200px; /* Establece un ancho máximo para las imágenes */
+    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen del título */
+}
+
+.pdf-block h3 {
+    font-size: 1.2em;
+    color: white; /* Cambia el color de los títulos a blanco */
+    text-align: center; /* Centra el texto del título */
+    margin: 10px 0; /* Añade un margen para separar el título del resto del contenido */
+}
+
+.pdf-block p {
+    margin: 10px 0;
+    text-align: center; /* Alinea el texto en el centro */
+}
+
+.pdf-block .boton-compra {
+    margin-top: 10px;
+}
+
+/* Sección de detalle de taller */
+.taller-detalle-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+    align-items: center; /* Asegura que los elementos estén centrados verticalmente */
+    background-color: #1a5b1b; /* Fondo verde oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Añade un margen alrededor del contenedor */
+}
+
+.taller-detalle img {
+    max-width: 150px; /* Ajusta el ancho máximo de la imagen */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Añade un margen derecho para separar la imagen del texto */
+}
+
+.detalle-content {
+    color: white; /* Cambia el color del texto a blanco */
+    flex-grow: 1; /* Permite que el contenido de texto ocupe el espacio restante */
+}
+
+.detalle-content h1 {
+    margin-top: 0;
+}
+
+.detalle-content p {
+    margin: 10px 0;
+    max-width: 600px; /* Establece un ancho máximo para el texto */
+    line-height: 1.5; /* Mejora la legibilidad del texto */
+}
+
