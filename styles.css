@@ -1,4 +1,14 @@
-/* Otros estilos */
+/* --- RESET GENERAL Y TIPOGRAFÍA --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +20,7 @@ body {
     min-height: 100vh;
 }
 
+/* --- HEADER Y NAVEGACIÓN --- */
 header {
     background-color: #ffb74d;
     color: white;
@@ -19,7 +30,7 @@ header {
 }
 
 .header-background {
-    background-image: url('banner.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -36,12 +47,13 @@ header {
 }
 
 nav ul {
-    background-color: rgba(255, 183, 77, 0.9); /* Color naranja medio transparente */
+    background-color: rgba(255, 183, 77, 0.9);
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 10px 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -52,78 +64,171 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1a5b1b;
+}
+
+/* --- SECCIONES PRINCIPALES (Semántica MAIN y SECTION) --- */
+main {
+    flex-grow: 1;
 }
 
 section {
     padding: 20px;
-    margin: 10px;
+    margin: 10px auto;
+    max-width: 1200px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-grow: 1;
 }
 
-/* Ajustes en la sección de presentación */
+/* --- SECCIÓN DE PRESENTACIÓN (FLEXBOX) --- */
 .flex-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: #1a5b1b; /* Fondo verde oscuro */
+    background-color: #1a5b1b;
     padding: 20px;
     border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .catazen {
-    width: 300px; /* Tamaño un poco más grande para armonizar con el texto */
+    width: 250px;
     height: auto;
-    border-radius: 50%; /* Opción para mantener un estilo más atractivo */
-    margin-right: 20px;
+    border-radius: 50%;
 }
 
 .text-block {
     max-width: 600px;
-    background-color: #1a5b1b; /* Fondo verde oscuro */
+    background-color: #1a5b1b;
     color: white;
     padding: 20px;
     border-radius: 8px;
 }
 
-/* Ajustes en la sección de Instagram */
-.redes-header {
+/* --- SECCIÓN PRODUCTOS / TIENDA (FLEXBOX) --- */
+.pdf-container {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.pdf-block {
+    background-color: #1a5b1b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+
+.pdf-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.pdf-block h3 {
+    font-size: 1.2em;
+    color: white;
     text-align: center;
-    font-size: 1.2em; /* Tamaño de letra un poco más pequeño */
-    font-weight: bold;
-    margin-bottom: 20px;
-    background-color: #ffb74d; /* Fondo naranja */
-    padding: 10px; /* Padding adicional para el fondo */
-    border-radius: 8px;
+    margin: 10px 0;
 }
 
-.icono-instagram {
-    width: auto; /* Ajuste automático para evitar distorsión */
-    height: 1em; /* Tamaño proporcional a la altura de la palabra Instagram */
-    margin-right: 10px;
+.pdf-block p {
+    margin: 10px 0;
+    text-align: center;
 }
 
-/* Ajuste para los reels */
-.reels-container {
+/* --- SECCIÓN RESEÑAS (CSS GRID Requisito obligatorio) --- */
+.resenas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.resena-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #1a5b1b;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.resena-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.resena-card h4 {
+    color: #1a5b1b;
+}
+
+/* --- SECCIÓN CONTACTO Y FORMULARIO (Formspree) --- */
+.contacto-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 15px;
-    background-color: #ffb74d; /* Fondo naranja */
-    padding: 20px; /* Padding adicional para el fondo */
-    border-radius: 8px;
 }
 
-.instagram-media {
-    width: 30%; /* Tamaño proporcional a la página */
-    min-width: 200px;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-/* Botones */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1a5b1b;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn-enviar {
+    background-color: #1a5b1b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #ffb74d;
+    color: #333;
+}
+
+/* --- BOTONES Y COMPONENTES --- */
 .boton-whatsapp {
     display: inline-flex;
     align-items: center;
@@ -142,7 +247,6 @@ section {
     max-width: 20px;
     height: auto;
     margin-right: 10px;
-    display: inline-block; /* Asegura que el icono se muestre en línea */
 }
 
 .boton-compra {
@@ -153,7 +257,8 @@ section {
     margin: 10px 0;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em; /* Ajusta el tamaño de fuente */
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .boton-compra:hover {
@@ -161,73 +266,30 @@ section {
     color: #ffb74d;
 }
 
-/* Sección de la tienda */
-.pdf-container {
-    display: flex;
-    justify-content: center; /* Centra los PDF */
-    gap: 15px; /* Espacio entre los PDF */
-    align-items: stretch; /* Asegura que los elementos tengan la misma altura */
-}
-
-.pdf-block {
-    background-color: #1a5b1b; /* Fondo verde oscuro */
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Establece un ancho fijo */
-    display: flex;
-    flex-direction: column; /* Asegura que el contenido dentro del bloque se alinee verticalmente */
-    justify-content: space-between; /* Distribuye el espacio equitativamente */
-    align-items: center; /* Centra los elementos horizontalmente */
-}
-
-.pdf-block img {
-    width: 100%; /* Hace que la imagen ocupe el ancho del contenedor */
-    height: auto;
-    border-radius: 8px;
-    max-width: 200px; /* Establece un ancho máximo para las imágenes */
-    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen del título */
-}
-
-.pdf-block h3 {
-    font-size: 1.2em;
-    color: white; /* Cambia el color de los títulos a blanco */
-    text-align: center; /* Centra el texto del título */
-    margin: 10px 0; /* Añade un margen para separar el título del resto del contenido */
-}
-
-.pdf-block p {
-    margin: 10px 0;
-    text-align: center; /* Alinea el texto en el centro */
-}
-
-.pdf-block .boton-compra {
-    margin-top: 10px;
-}
-
-/* Sección de detalle de taller */
+/* --- SECCIÓN DETALLE DE TALLER --- */
 .taller-detalle-container {
     display: flex;
-    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
-    align-items: center; /* Asegura que los elementos estén centrados verticalmente */
-    background-color: #1a5b1b; /* Fondo verde oscuro */
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1a5b1b;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px; /* Añade un margen alrededor del contenedor */
+    margin: 20px auto;
+    max-width: 900px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.taller-detalle img {
-    max-width: 150px; /* Ajusta el ancho máximo de la imagen */
+.taller-detalle-container img {
+    max-width: 200px;
     height: auto;
     border-radius: 8px;
-    margin-right: 20px; /* Añade un margen derecho para separar la imagen del texto */
 }
 
 .detalle-content {
-    color: white; /* Cambia el color del texto a blanco */
-    flex-grow: 1; /* Permite que el contenido de texto ocupe el espacio restante */
+    color: white;
+    flex-grow: 1;
 }
 
 .detalle-content h1 {
@@ -236,7 +298,35 @@ section {
 
 .detalle-content p {
     margin: 10px 0;
-    max-width: 600px; /* Establece un ancho máximo para el texto */
-    line-height: 1.5; /* Mejora la legibilidad del texto */
+    line-height: 1.5;
 }
 
+/* --- FOOTER --- */
+footer {
+    background-color: #1a5b1b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVIDAD OBLIGATORIA) --- */
+@media (max-width: 768px) {
+    .flex-container, .taller-detalle-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .catazen {
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+}
